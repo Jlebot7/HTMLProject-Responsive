@@ -21,8 +21,7 @@ h1 {
 
 #inicio {
 	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.6), #2a1c7793),
-		url("../img/Negra.jpeg");
+		linear-gradient(rgba(0, 0, 0, 0.6), #2a1c7793), url("../img/Negra.jpeg");
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
@@ -90,5 +89,37 @@ nav ul li a:hover {
 	}
 	100% {
 		transform: translateX(calc(-1000px - 80px));
+	}
+}
+
+.contenedor-mision {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	padding: 60px 20px;
+	background-color: #fff;
+}
+
+.tarjeta-info {
+	background-color: #f0f8ff;
+	padding: 30px;
+	border-radius: 10px;
+	width: 40%;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-info h3 {
+	color: #00509e;
+	margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+	.contenedor-mision {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tarjeta-info {
+		width: 90%;
 	}
 }
