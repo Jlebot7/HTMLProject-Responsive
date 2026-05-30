@@ -123,3 +123,18 @@ nav ul li a:hover {
 		width: 90%;
 	}
 }
+
+.contenedor-catalogo {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 15px;
+	padding: 20px;
+}
+
+.tarjeta-animal {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+}
