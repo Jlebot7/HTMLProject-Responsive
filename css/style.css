@@ -113,20 +113,10 @@ nav ul li a:hover {
 	color: #00509e;
 	margin-bottom: 15px;
 }
-@media (max-width: 768px) {
-	.contenedor-mision {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.tarjeta-info {
-		width: 90%;
-	}
-}
 
 .contenedor-catalogo {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 15px;
 	padding: 20px;
 }
@@ -137,4 +127,27 @@ nav ul li a:hover {
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #002761;
+	color: #fff;
+	padding: 20px 0;
+	margin-top: 40px;
+	gap: 30px;
+}
+
+@media (max-width: 768px) {
+	.contenedor-mision {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tarjeta-info {
+		width: 90%;
+	}
 }
