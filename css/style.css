@@ -189,9 +189,11 @@ footer {
 }
 
 @media (min-width: 1025px) {
-    .contenedor-catalogo{
+    .contenedor-catalogo {
         display: grid;
-		gap: var(--main-gap);
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center; 
+        gap: var(--main-gap);
     }
 
 	nav ul {
