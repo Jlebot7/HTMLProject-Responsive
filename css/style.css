@@ -156,7 +156,8 @@ footer {
     margin: var(--main-gap) auto;
     max-width: 500px;
     border: var(--sec-color) solid 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--main-color), var(--sec-color));
 }
 
 .grupo-formulario {
