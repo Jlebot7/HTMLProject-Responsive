@@ -97,28 +97,25 @@ nav ul li a:hover {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-#contenedor-informacion {
+#contenedor-informacion,
+.tarjeta-info {
     padding: var(--spacing);
-    text-align: center;
-    color: var(--black-color);
     border-radius: 10px;
-    margin: 10px auto;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.35);
     background: linear-gradient(135deg, var(--main-color), var(--sec-color));
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+#contenedor-informacion {
+    color: var(--black-color);
+    margin: 10px auto;
+}
+
 .tarjeta-info {
     color: var(--bg-color);
-    padding: var(--spacing);
-    border-radius: 10px;
     margin: 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.35);
-    background: linear-gradient(135deg, var(--main-color), var(--sec-color));
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tarjeta-info h3 {
@@ -273,7 +270,21 @@ button:hover {
         width: min(250px, 70vw);
         height: min(250px, 70vw);
     }
+
+    .informacion-animal {
+        flex-direction: column;
+    }
+
+    .informacion-animal img,
+    .detalles-texto {
+        width: 100%;
+    }
+
+    .informacion-animal img {
+        height: 200px;
+    }
 }
+
 
 @media (min-width: 601px) and (max-width: 1024px) {
     .contenedor-catalogo{
@@ -309,20 +320,12 @@ button:hover {
     }
 }
 
-/* ==========================================
-   EL TRUCO DEL CHECKBOX (INTERACTIVIDAD)
-   ========================================== */
-
-/* 1. Escondemos el checkbox real, no queremos que se vea el cuadrito */
 .perfil-toggle {
     display: none;
 }
 
-/* 2. Ocultamos la vista ampliada por defecto */
 .tarjeta-animal-ampliada {
     display: none;
-    
-    /* Lo posicionamos como una ventana flotante (Modal) encima de todo */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -337,18 +340,10 @@ button:hover {
     border: 5px solid var(--sec-color);
 }
 
-/* 3. ¡AQUÍ SUCEDE LA MAGIA! 
-   Cuando el checkbox esté marcado (:checked), busca a su hermano (~ .tarjeta-animal-ampliada) y muéstralo */
 .perfil-toggle:checked ~ .tarjeta-animal-ampliada {
-    display: block; /* Se vuelve visible */
+    display: block;
 }
 
-
-/* ==========================================
-   ESTILOS DE LA VISTA AMPLIADA (FLEXBOX)
-   ========================================== */
-
-/* Estilizamos el label para que parezca un botón real */
 .btn-interactivo {
     display: inline-block;
     padding: var(--spacing);
@@ -364,7 +359,6 @@ button:hover {
     background-color: var(--sec-color);
 }
 
-/* Botón de cerrar interno */
 .btn-cerrar {
     float: right;
     cursor: pointer;
@@ -372,10 +366,9 @@ button:hover {
     font-weight: bold;
 }
 
-/* Contenedor Flexbox para la foto y la info */
 .informacion-animal {
     display: flex;
-    flex-direction: row; /* Lado a lado en pantallas grandes */
+    flex-direction: row;
     gap: 20px;
     margin-top: 20px;
 }
@@ -406,17 +399,39 @@ button:hover {
     width: 100%;
 }
 
-/* Responsive: Pasamos a una sola columna en pantallas pequeñas */
 @media (max-width: 600px) {
-    .informacion-animal {
-        flex-direction: column; /* Apilados verticalmente */
+    .contenedor-mision, footer {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--main-gap);
     }
-    
-    .informacion-animal img, 
+
+    nav ul {
+        display: flex;
+    }
+
+    .formulario-contacto {
+        width: 90%;
+    }
+
+    .carrusel-pista {
+        gap: 8px;
+    }
+
+    .carrusel-pista img {
+        width: min(250px, 70vw);
+        height: min(250px, 70vw);
+    }
+
+    .informacion-animal {
+        flex-direction: column;
+    }
+
+    .informacion-animal img,
     .detalles-texto {
         width: 100%;
     }
-    
+
     .informacion-animal img {
         height: 200px;
     }
