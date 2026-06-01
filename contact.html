@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundacion Patitas Felices</title>
+    </head>
+    <body>
+        <header id="inicio">
+            <div class="titulos">
+                <h1>Fundacion Patitas Felices</h1>
+                <h2>El hogar de tu proximo mejor amigo</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#mision">Misión</a></li>
+                    <li><a href="gallery.html">Catálogo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form action="#" method="POST" class="formulario-contacto">
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="ask">Motivo de contacto</label>
+                <select name="Motivo de contacto" id="ask" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="adopcion">Quiero adoptar un animal</option>
+                    <option value="voluntariado">Quiero voluntariarme</option>
+                    <option value="donacion">Quiero hacer una donación</option>
+                    <option value="informacion">Quiero más información</option>
+                </select>
+            </div>
+            <div class="grupo-formulario">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <footer>
+            <p>Fundacion Patitas Felices</p>
+            <p>Contacto: <a href="mailto:info@fundacionpatitasfelices.com">info@fundacionpatitasfelices.org</a></p>
+            <p>Teléfono: +57 (320) 123-4567</p>
+            <p>Dirección: Calle 123 #45-67, Bogotá, Colombia</p>
+            <p>Desarrollado por: Omega Corp.</p>
+            <p>2026 - All Rights Reserved©</p>
+        </footer>
+    </body>
+</html>
