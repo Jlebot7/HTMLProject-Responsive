@@ -4,6 +4,7 @@
     --bg-color: #ffffff;
     --spacing: 10px;
 	--sec-color:#1c777693;
+	--black-color: #000000;
 }
 
 * {
@@ -18,14 +19,7 @@ h1 {
 	text-align: center;
 }
 
-.contenedor {
-	max-width: 800px;
-	margin: 0 auto;
-	background-color: var(--bg-color);
-	padding: var(--spacing);
-	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 #inicio {
 	background-image:
@@ -69,17 +63,20 @@ nav ul li a:hover {
 #carrusel-contenedor {
 	width: 100%;
 	overflow: hidden;
+	overflow-x: hidden;
+	max-width: 100%;
 	background-color: var(--bg-color);
 	padding: var(--spacing);
 }
 
 .carrusel-pista {
 	display: flex;
-	width: calc(250px * 8 + 20px * 8);
+	width: max-content;
 	gap: var(--main-gap);
-	margin: var(--spacing);
+	margin: 0;
 	animation: deslizar 10s linear infinite;
 }
+
 
 .carrusel-pista:hover {
 	animation-play-state: paused;
@@ -92,25 +89,26 @@ nav ul li a:hover {
 	border-radius: 15px;
 }
 
-.contenedor-mision {
-	display: flex;
-	justify-content: center;
+.contenedor-tarjetas-info {
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: var(--main-gap);
 	padding: var(--spacing);
-	background-color: var(--bg-color);
 }
 
 .tarjeta-info {
-	background-color: var(--sec-color);
+	color: var(--bg-color);
 	padding: var(--spacing);
 	border-radius: 10px;
-	width: 40%;
+	margin: 0;
 	text-align: center;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.35);
+	background: linear-gradient(135deg, var(--main-color), var(--sec-color));
 }
 
 .tarjeta-info h3 {
-	color: var(--sec-color);
+	color: var(--black-color);
 	margin-bottom: 15px;
 }
 
@@ -204,12 +202,13 @@ button:hover {
 		gap: var(--main-gap);
 	}
 
-	.tarjeta-info {
-		width: 50%;
-	}
-
+	/* 1 columna (grid por defecto) */
 	nav ul {
 		display: flex;
+	}
+
+	.formulario-contacto {
+		width: 90%;
 	}
 }
 
@@ -224,6 +223,9 @@ button:hover {
 		display: flex;
 	}
 
+	.contenedor-tarjetas-info {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (min-width: 1025px) {
@@ -237,6 +239,10 @@ button:hover {
 	nav ul {
 		display: flex;
 		gap: var(--main-gap);
+	}
+
+	.contenedor-tarjetas-info {
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 }
