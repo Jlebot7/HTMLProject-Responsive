@@ -29,6 +29,24 @@ h3 {
     text-align: center;
 }
 
+.enlace-logo {
+    display: inline-block;
+    max-width: 350px;
+    width: 90%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.enlace-logo:hover {
+    transform: scale(1.03);
+}
+
+.logo-principal {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 #inicio {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--sec-color)), url("../img/Negra.jpeg");
     background-size: cover;
