@@ -35,7 +35,7 @@ h3 {
 
 .titulos {
     text-align: center;
-    color: #fff;
+    color: var(--bg-color);
     margin: auto;
 }
 
@@ -94,6 +94,19 @@ nav ul li a:hover {
     grid-template-columns: 1fr;
     gap: var(--main-gap);
     padding: var(--spacing);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#contenedor-informacion {
+    padding: var(--spacing);
+    text-align: center;
+    color: var(--black-color);
+    border-radius: 10px;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: linear-gradient(135deg, var(--main-color), var(--sec-color));
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tarjeta-info {
@@ -105,11 +118,17 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.35);
     background: linear-gradient(135deg, var(--main-color), var(--sec-color));
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tarjeta-info h3 {
     color: var(--black-color);
     margin-bottom: 15px;
+}
+
+#contenedor-informacion:hover, .tarjeta-info:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, var(--sec-color), var(--main-color));
 }
 
 .contenedor-catalogo {
