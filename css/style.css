@@ -176,6 +176,30 @@ footer {
 	padding: var(--spacing);
 }
 
+input, select, textarea {
+	width: 100%;
+	padding: var(--spacing);
+	border: 1px solid var(--sec-color);
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+button {
+	padding: var(--spacing);
+	border: none;
+	border-radius: 5px;
+	background-color: var(--main-color);
+	color: var(--bg-color);
+	font-size: 1rem;
+	cursor: pointer;
+	margin: var(--spacing) auto;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--sec-color);
+}
+
 @media (max-width: 600px) {
     .contenedor-mision, footer {
 		flex-direction: column;
