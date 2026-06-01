@@ -19,6 +19,11 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    color: var(--black-color);
+    text-align: center;
+}
+
 #inicio {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--sec-color)), url("../img/Negra.jpeg");
     background-size: cover;
