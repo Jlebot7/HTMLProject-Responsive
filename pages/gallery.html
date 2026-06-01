@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fundacion Patitas Felices</title>
+        <title>Fundación Patitas Felices</title>
     </head>
     <body>
         <header id="inicio">
             <div class="titulos">
-                <h1>Fundacion Patitas Felices</h1>
-                <h2>El hogar de tu proximo mejor amigo</h2>
+                <h1>Fundación Patitas Felices</h1>
+                <h2>El hogar de tu próximo mejor amigo</h2>
             </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../index.html#mision">Conocenos</a></li>
+                    <li><a href="../index.html#mision">Conócenos</a></li>
                     <li><a href="gallery.html">Adopta</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
@@ -28,48 +26,158 @@
         </header>
         
         <section id="carrusel-contenedor">
-            <h3>Adopta un amigo peludo</h2>
+            <h3>Adopta un amigo peludo</h3>
+            
             <div class="contenedor-catalogo">
-                <div class="tarjeta-animal">
-                <img src="../img/Negra.jpeg" alt="Negra">
-                <h3>Negra</h3>
-                <h4>Edad: 1 año</h4>
-                <button>Mas informacion</button>
-            </div>
-            <div class="tarjeta-animal">
-                <img src="../img/m2.jpeg" alt="Peluso">
-                <h3>Peluso</h3>
-                <h4>Edad: 5 años</h4>
-                <button>Mas informacion</button>
-            </div>
-            <div class="tarjeta-animal">
-                <img src="../img/m3.jpeg" alt="Manchitas">
-                <h3>Manchitas</h3>
-                <h4>Edad: 2 años</h4>
-                <button>Mas informacion</button>
-            </div>
-            <div class="tarjeta-animal">
-                <img src="../img/m4.jpeg" alt="Tigrillo">
-                <h3>Tigrillo</h3>
-                <h4>Edad: 8 meses</h4>
-                <button>Mas informacion</button>
-            </div>
-            <div class="tarjeta-animal">
-                <img src="../img/m5.jpeg" alt="Catpuccino">
-                <h3>Catpuccino</h3>
-                <h4>Edad: 5 años</h4>
-                <button>Mas informacion</button>
-            </div>
-            <div class="tarjeta-animal">
-                <img src="../img/m6.jpeg" alt="Pimienta">
-                <h3>Pimienta</h3>
-                <h4>Edad: 3 meses</h4>
-                <button>Mas informacion</button>
-            </div>
+                
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-negra" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/Negra.jpeg" alt="Negra">
+                        <h3>Negra</h3>
+                        <h4>Edad: 1 año</h4>
+                        <label for="abrir-perfil-negra" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-negra" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Negra</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/Negra.jpeg" alt="Negra">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 1 año | <strong>Sexo:</strong> Hembra | <strong>Tamaño:</strong> Mediano</p>
+                                <p class="descripcion">Negra es una gatita muy juguetona y curiosa, ama las cajas y los juguetes con cascabel, ha aprendido varios trucos como traer la pelota o pararse en dos patas, busca un hogar con mucho amor.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-peluso" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/m2.jpeg" alt="Peluso">
+                        <h3>Peluso</h3>
+                        <h4>Edad: 5 años</h4>
+                        <label for="abrir-perfil-peluso" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-peluso" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Peluso</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/m2.jpeg" alt="Peluso">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 5 años | <strong>Sexo:</strong> Macho | <strong>Tamaño:</strong> Grande</p>
+                                <p class="descripcion">Peluso es un gato leal, tranquilo y excelente compañero para tardes de descanso. Le encanta estar en familia y recibir mimos en la barbilla.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-manchitas" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/m3.jpeg" alt="Manchitas">
+                        <h3>Manchitas</h3>
+                        <h4>Edad: 2 años</h4>
+                        <label for="abrir-perfil-manchitas" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-manchitas" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Manchitas</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/m3.jpeg" alt="Manchitas">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 2 años | <strong>Sexo:</strong> Hembra | <strong>Tamaño:</strong> Mediano</p>
+                                <p class="descripcion">Manchitas es una gata llena de energía y amor. Es muy sociable y le encanta perseguir juguetes de cuerda y trepar a rascadores altos.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-tigrillo" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/m4.jpeg" alt="Tigrillo">
+                        <h3>Tigrillo</h3>
+                        <h4>Edad: 8 meses</h4>
+                        <label for="abrir-perfil-tigrillo" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-tigrillo" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Tigrillo</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/m4.jpeg" alt="Tigrillo">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 8 meses | <strong>Sexo:</strong> Macho | <strong>Tamaño:</strong> Pequeño</p>
+                                <p class="descripcion">Un minino dulce y curioso que busca descubrir el mundo de la mano de una familia paciente. Es experto en cazar sombras.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-catpuccino" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/m5.jpeg" alt="Catpuccino">
+                        <h3>Catpuccino</h3>
+                        <h4>Edad: 5 años</h4>
+                        <label for="abrir-perfil-catpuccino" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-catpuccino" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Catpuccino</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/m5.jpeg" alt="Catpuccino">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 5 años | <strong>Sexo:</strong> Macho | <strong>Tamaño:</strong> Mediano</p>
+                                <p class="descripcion">Amante de las siestas largas bajo los rayos del sol. Es un felino muy calmado, independiente y excelente para un hogar tranquilo.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="contenedor-tarjeta-completa">
+                    <input type="checkbox" id="abrir-perfil-pimienta" class="perfil-toggle">
+                    
+                    <div class="tarjeta-animal">
+                        <img src="../img/m6.jpeg" alt="Pimienta">
+                        <h3>Pimienta</h3>
+                        <h4>Edad: 3 meses</h4>
+                        <label for="abrir-perfil-pimienta" class="btn-interactivo">Más información</label>
+                    </div>
+
+                    <section class="tarjeta-animal-ampliada">
+                        <label for="abrir-perfil-pimienta" class="btn-cerrar">✕ Cerrar</label>
+                        <h3>Perfil de Pimienta</h3>
+                        <div class="informacion-animal">
+                            <img src="../img/m6.jpeg" alt="Pimienta">
+                            <div class="detalles-texto">
+                                <p class="caracteristicas"><strong>Edad:</strong> 3 meses | <strong>Sexo:</strong> Hembra | <strong>Tamaño:</strong> Pequeño</p>
+                                <p class="descripcion">Pequeña, traviesa y llena de vida. Esta gatita está lista para alegrar cualquier espacio con sus travesuras y ronroneos.</p>
+                                <button class="btn-solicitar-adopcion">Solicitar adopción</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
             </div>
         </section>
         <footer>
-            <p>Fundacion Patitas Felices</p>
+            <p>Fundación Patitas Felices</p>
             <p>Contacto: <a href="mailto:info@fundacionpatitasfelices.com">info@fundacionpatitasfelices.org</a></p>
             <p>Teléfono: +57 (320) 123-4567</p>
             <p>Dirección: Calle 123 #45-67, Bogotá, Colombia</p>
@@ -78,4 +186,3 @@
         </footer>
     </body>
 </html>
-

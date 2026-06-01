@@ -161,6 +161,18 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
+.tarjeta-animal-ampliada {
+   display: flex;
+    flex-direction: column;
+    gap: var(--main-gap);
+    margin: var(--spacing);
+    border: 5px solid var(--sec-color);
+    border-radius: 8px;
+    text-align: center;
+    background: linear-gradient(to right, var(--main-color), var(--sec-color));
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -294,5 +306,118 @@ button:hover {
 
     .contenedor-tarjetas-info {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   EL TRUCO DEL CHECKBOX (INTERACTIVIDAD)
+   ========================================== */
+
+/* 1. Escondemos el checkbox real, no queremos que se vea el cuadrito */
+.perfil-toggle {
+    display: none;
+}
+
+/* 2. Ocultamos la vista ampliada por defecto */
+.tarjeta-animal-ampliada {
+    display: none;
+    
+    /* Lo posicionamos como una ventana flotante (Modal) encima de todo */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    border: 5px solid var(--sec-color);
+}
+
+/* 3. ¡AQUÍ SUCEDE LA MAGIA! 
+   Cuando el checkbox esté marcado (:checked), busca a su hermano (~ .tarjeta-animal-ampliada) y muéstralo */
+.perfil-toggle:checked ~ .tarjeta-animal-ampliada {
+    display: block; /* Se vuelve visible */
+}
+
+
+/* ==========================================
+   ESTILOS DE LA VISTA AMPLIADA (FLEXBOX)
+   ========================================== */
+
+/* Estilizamos el label para que parezca un botón real */
+.btn-interactivo {
+    display: inline-block;
+    padding: var(--spacing);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: var(--spacing) auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-interactivo:hover {
+    background-color: var(--sec-color);
+}
+
+/* Botón de cerrar interno */
+.btn-cerrar {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+/* Contenedor Flexbox para la foto y la info */
+.informacion-animal {
+    display: flex;
+    flex-direction: row; /* Lado a lado en pantallas grandes */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.informacion-animal img {
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detalles-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.caracteristicas {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.btn-solicitar-adopcion {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Responsive: Pasamos a una sola columna en pantallas pequeñas */
+@media (max-width: 600px) {
+    .informacion-animal {
+        flex-direction: column; /* Apilados verticalmente */
+    }
+    
+    .informacion-animal img, 
+    .detalles-texto {
+        width: 100%;
+    }
+    
+    .informacion-animal img {
+        height: 200px;
     }
 }
