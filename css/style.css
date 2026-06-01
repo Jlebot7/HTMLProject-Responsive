@@ -5,7 +5,12 @@
     --spacing: 10px;
     --sec-color:#1c777693;
     --black-color: #000000;
+
+    --mobile-carousel-gap: 8px;
+    --mobile-carousel-img-size: 250px;
+    --mobile-info-img-height: 200px;
 }
+
 
 * {
     margin: 0;
@@ -263,12 +268,12 @@ button:hover {
     }
 
     .carrusel-pista {
-        gap: 8px;
+        gap: var(--mobile-carousel-gap);
     }
 
     .carrusel-pista img {
-        width: min(250px, 70vw);
-        height: min(250px, 70vw);
+        width: min(var(--mobile-carousel-img-size), 70vw);
+        height: min(var(--mobile-carousel-img-size), 70vw);
     }
 
     .informacion-animal {
@@ -281,9 +286,10 @@ button:hover {
     }
 
     .informacion-animal img {
-        height: 200px;
+        height: var(--mobile-info-img-height);
     }
 }
+
 
 
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -415,12 +421,12 @@ button:hover {
     }
 
     .carrusel-pista {
-        gap: 8px;
+        gap: var(--mobile-carousel-gap);
     }
 
     .carrusel-pista img {
-        width: min(250px, 70vw);
-        height: min(250px, 70vw);
+        width: min(var(--mobile-carousel-img-size), 70vw);
+        height: min(var(--mobile-carousel-img-size), 70vw);
     }
 
     .informacion-animal {
@@ -433,6 +439,7 @@ button:hover {
     }
 
     .informacion-animal img {
-        height: 200px;
+        height: var(--mobile-info-img-height);
     }
 }
+
