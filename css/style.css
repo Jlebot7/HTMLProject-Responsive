@@ -92,8 +92,6 @@ nav ul li a:hover {
 	border-radius: 15px;
 }
 
-
-
 .contenedor-mision {
 	display: flex;
 	justify-content: center;
@@ -131,10 +129,12 @@ nav ul li a:hover {
 	border: 5px solid var(--sec-color);
 	border-radius: 8px;
 	text-align: center;
+	transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tarjeta-animal:hover {
-	animation: elevate 1s ease-in infinite alternate;
+	transform: translateY(-10px);
+	background: linear-gradient(to right, var(--main-color), var(--sec-color));
 }
 
 .tarjeta-animal img {
@@ -247,14 +247,5 @@ button:hover {
 	}
 	100% {
 		transform: translateX(calc(-1000px - 80px));
-	}
-}
-
-@keyframes elevate{
-	0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(-10px);
 	}
 }
