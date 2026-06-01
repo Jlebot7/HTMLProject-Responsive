@@ -62,7 +62,7 @@ nav ul li a:hover {
     color: var(--bg-color);
 }
 
-#carrusel-contenedor {
+.carrusel-contenedor {
     width: 100%;
     overflow: hidden;
     background-color: var(--bg-color);
@@ -74,7 +74,7 @@ nav ul li a:hover {
     width: max-content;
     gap: var(--main-gap);
     margin: 0;
-    animation: deslizar 10s linear infinite;
+    animation: deslizar 15s linear infinite;
 }
 
 .carrusel-pista:hover {
