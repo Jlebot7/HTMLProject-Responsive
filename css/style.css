@@ -132,8 +132,11 @@ nav ul li a:hover {
 }
 
 #contenedor-informacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     color: var(--black-color);
     margin: 10px auto;
+    
 }
 
 .tarjeta-info {
@@ -141,9 +144,29 @@ nav ul li a:hover {
     margin: 0;
 }
 
+.tarjeta-info h1 {
+    color: var(--bg-color);
+    margin-bottom: 10px;
+}
+
+.footnote {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--bg-color);
+    text-align: center;
+    margin-top: var(--main-gap);
+}
+
 .tarjeta-info h3 {
     color: var(--black-color);
     margin-bottom: 15px;
+}
+.tarjeta-info img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-bottom: var(--main-gap);
 }
 
 #contenedor-informacion:hover, .tarjeta-info:hover {
@@ -156,6 +179,48 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--main-gap);
     padding: var(--spacing);
+}
+
+.contenedor-grafico {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: var(--spacing);
+    border: 2px solid var(--sec-color);
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--main-color), var(--sec-color));
+}
+
+.barra-titulo {
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    text-align: center;
+    margin-bottom: var(--main-gap);
+}
+
+.barra-contenedor {
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contenedor-grafico .barra-contenedor {
+    margin: var(--spacing) auto;
+    max-width: 500px;
+}
+
+.contenedor-grafico h4{
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.barra-progreso {
+    height: 30px;
+    background-color: var(--sec-color);
+    color: var(--bg-color);
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
 }
 
 .tarjeta-animal {
