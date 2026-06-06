@@ -132,8 +132,6 @@ nav ul li a:hover {
 }
 
 #contenedor-informacion {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     color: var(--black-color);
     margin: 10px auto;
     
