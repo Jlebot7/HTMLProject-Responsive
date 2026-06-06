@@ -130,7 +130,7 @@ nav ul li a:hover {
     margin: var(--main-gap) auto;
     width: 100%;
     max-width: 300px;
-    justify-self: center;
+    
 }
 
 #contenedor-informacion,
