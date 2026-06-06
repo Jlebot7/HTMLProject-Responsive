@@ -3,14 +3,12 @@
     --main-color: #3498db;
     --bg-color: #ffffff;
     --spacing: 10px;
-    --sec-color:#1c777693;
+    --sec-color: #1c777693;
     --black-color: #000000;
-
     --mobile-carousel-gap: 8px;
     --mobile-carousel-img-size: 250px;
     --mobile-info-img-height: 200px;
 }
-
 
 * {
     margin: 0;
@@ -146,7 +144,8 @@ nav ul li a:hover {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-#contenedor-tarjetas-info-metricas {
+/* AQUÍ SE CORRIGIÓ EL # POR EL . PARA QUE FUNCIONE LA CLASE */
+.contenedor-tarjetas-info-metricas {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--main-gap);
@@ -162,7 +161,6 @@ nav ul li a:hover {
 #contenedor-informacion {
     color: var(--black-color);
     margin: 10px auto;
-    
 }
 
 .tarjeta-info {
@@ -187,6 +185,7 @@ nav ul li a:hover {
     color: var(--black-color);
     margin-bottom: 15px;
 }
+
 .tarjeta-info img {
     width: 100px;
     height: 100px;
@@ -203,7 +202,8 @@ nav ul li a:hover {
     margin-bottom: var(--main-gap);
 }
 
-#contenedor-informacion:hover, .tarjeta-info:hover {
+#contenedor-informacion:hover,
+.tarjeta-info:hover {
     transform: translateY(-10px);
     background: linear-gradient(135deg, var(--sec-color), var(--main-color));
 }
@@ -243,7 +243,7 @@ nav ul li a:hover {
     max-width: 500px;
 }
 
-.contenedor-grafico h4{
+.contenedor-grafico h4 {
     color: var(--bg-color);
     text-align: center;
 }
@@ -281,7 +281,7 @@ nav ul li a:hover {
 }
 
 .tarjeta-animal-ampliada {
-   display: flex;
+    display: flex;
     flex-direction: column;
     gap: var(--main-gap);
     margin: var(--spacing);
@@ -322,7 +322,9 @@ footer {
     padding: var(--spacing);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
     padding: var(--spacing);
     border: 1px solid var(--sec-color);
@@ -330,15 +332,18 @@ input, select, textarea {
     font-size: 1rem;
 }
 
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
     border: 2px solid red;
 }
 
-input:valid, textarea:valid {
+input:valid,
+textarea:valid {
     border: 2px solid green;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
     border-color: yellow;
     box-shadow: 0 0 5px yellow;
@@ -364,100 +369,11 @@ button:hover {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
 }
-
-@media (max-width: 600px) {
-    .contenedor-mision, footer {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--main-gap);
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    .formulario-contacto {
-        width: 90%;
-    }
-
-    .carrusel-pista {
-        gap: var(--mobile-carousel-gap);
-    }
-
-    .carrusel-pista img {
-        width: min(var(--mobile-carousel-img-size), 70vw);
-        height: min(var(--mobile-carousel-img-size), 70vw);
-    }
-
-    .informacion-animal {
-        flex-direction: column;
-    }
-
-    .informacion-animal img,
-    .detalles-texto {
-        width: 100%;
-    }
-
-    .informacion-animal img {
-        height: var(--mobile-info-img-height);
-    }
-}
-
-
-
-@media (max-width: 600px) {
-    /* Métricas: 1 columna (centradas) */
-    #metricas.contenedor-tarjetas-info-metricas {
-        grid-template-columns: 1fr;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .contenedor-catalogo{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--main-gap);
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    /* Métricas: 2 columnas x 2 filas */
-    #metricas.contenedor-tarjetas-info-metricas {
-        grid-template-columns: repeat(2, minmax(0, 300px));
-        justify-content: center;
-    }
-}
-
-
-
-
-@media (min-width: 1025px) {
-    .contenedor-catalogo {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 250px);
-        justify-content: center; 
-        gap: var(--main-gap);
-    }
-
-    nav ul {
-        display: flex;
-        gap: var(--main-gap);
-    }
-
-    #metricas.contenedor-tarjetas-info-metricas {
-        grid-template-columns: 1fr;
-        justify-content: center;
-    }
-}
-
-
 
 .perfil-toggle {
     display: none;
@@ -479,7 +395,7 @@ button:hover {
     border: 5px solid var(--sec-color);
 }
 
-.perfil-toggle:checked ~ .tarjeta-animal-ampliada {
+.perfil-toggle:checked~.tarjeta-animal-ampliada {
     display: block;
 }
 
@@ -539,7 +455,9 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .contenedor-mision, footer {
+
+    .contenedor-mision,
+    footer {
         flex-direction: column;
         align-items: center;
         gap: var(--main-gap);
@@ -574,5 +492,46 @@ button:hover {
     .informacion-animal img {
         height: var(--mobile-info-img-height);
     }
+
+    .contenedor-tarjetas-info-metricas {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor-catalogo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--main-gap);
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .contenedor-tarjetas-info-metricas {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .contenedor-catalogo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 250px);
+        justify-content: center;
+        gap: var(--main-gap);
+    }
+
+    nav ul {
+        display: flex;
+        gap: var(--main-gap);
+    }
+
+    /* Métricas: 4 columnas en fila india */
+    .contenedor-tarjetas-info-metricas {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+}
