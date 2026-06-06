@@ -120,6 +120,21 @@ nav ul li a:hover {
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+.tarjeta-info-metricas {
+    padding: var(--spacing);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: linear-gradient(135deg, var(--main-color), var(--sec-color));
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: var(--bg-color);
+    margin: var(--main-gap) auto;
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
+}
+
 #contenedor-informacion,
 .tarjeta-info {
     padding: var(--spacing);
@@ -129,6 +144,19 @@ nav ul li a:hover {
     border: 2px solid rgba(255, 255, 255, 0.35);
     background: linear-gradient(135deg, var(--main-color), var(--sec-color));
     transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#contenedor-tarjetas-info-metricas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--main-gap);
+    padding: var(--spacing);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tarjeta-info-metricas:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(135deg, var(--sec-color), var(--main-color));
 }
 
 #contenedor-informacion {
@@ -164,6 +192,14 @@ nav ul li a:hover {
     height: 100px;
     object-fit: cover;
     border-radius: 50px;
+    margin-bottom: var(--main-gap);
+}
+
+.tarjeta-info-metricas img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 60px;
     margin-bottom: var(--main-gap);
 }
 
@@ -373,6 +409,14 @@ button:hover {
 
 
 
+@media (max-width: 600px) {
+    /* Métricas: 1 columna (centradas) */
+    #metricas.contenedor-tarjetas-info-metricas {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+
 @media (min-width: 601px) and (max-width: 1024px) {
     .contenedor-catalogo{
         display: grid;
@@ -384,10 +428,15 @@ button:hover {
         display: flex;
     }
 
-    .contenedor-tarjetas-info {
-        grid-template-columns: repeat(2, 1fr);
+    /* Métricas: 2 columnas x 2 filas */
+    #metricas.contenedor-tarjetas-info-metricas {
+        grid-template-columns: repeat(2, minmax(0, 300px));
+        justify-content: center;
     }
 }
+
+
+
 
 @media (min-width: 1025px) {
     .contenedor-catalogo {
@@ -402,10 +451,13 @@ button:hover {
         gap: var(--main-gap);
     }
 
-    .contenedor-tarjetas-info {
-        grid-template-columns: repeat(2, 1fr);
+    #metricas.contenedor-tarjetas-info-metricas {
+        grid-template-columns: 1fr;
+        justify-content: center;
     }
 }
+
+
 
 .perfil-toggle {
     display: none;
